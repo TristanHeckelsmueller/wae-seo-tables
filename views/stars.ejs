@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WAE Stars Generator</title>
+    <style>
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:300;src:url('../fonts/ubuntu-v20-latin-300.eot');src:local(''),url('../fonts/ubuntu-v20-latin-300.eot?#iefix') format('embedded-opentype'),url('../fonts/ubuntu-v20-latin-300.woff2') format('woff2'),url('../fonts/ubuntu-v20-latin-300.woff') format('woff'),url('../fonts/ubuntu-v20-latin-300.ttf') format('truetype'),url('../fonts/ubuntu-v20-latin-300.svg#Ubuntu') format('svg')}@font-face{font-family:'Ubuntu';font-style:italic;font-weight:300;src:url('../fonts/ubuntu-v20-latin-300italic.eot');src:local(''),url('../fonts/ubuntu-v20-latin-300italic.eot?#iefix') format('embedded-opentype'),url('../fonts/ubuntu-v20-latin-300italic.woff2') format('woff2'),url('../fonts/ubuntu-v20-latin-300italic.woff') format('woff'),url('../fonts/ubuntu-v20-latin-300italic.ttf') format('truetype'),url('../fonts/ubuntu-v20-latin-300italic.svg#Ubuntu') format('svg')}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:400;src:url('../fonts/ubuntu-v20-latin-regular.eot');src:local(''),url('../fonts/ubuntu-v20-latin-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/ubuntu-v20-latin-regular.woff2') format('woff2'),url('../fonts/ubuntu-v20-latin-regular.woff') format('woff'),url('../fonts/ubuntu-v20-latin-regular.ttf') format('truetype'),url('../fonts/ubuntu-v20-latin-regular.svg#Ubuntu') format('svg')}@font-face{font-family:'Ubuntu';font-style:italic;font-weight:400;src:url('../fonts/ubuntu-v20-latin-italic.eot');src:local(''),url('../fonts/ubuntu-v20-latin-italic.eot?#iefix') format('embedded-opentype'),url('../fonts/ubuntu-v20-latin-italic.woff2') format('woff2'),url('../fonts/ubuntu-v20-latin-italic.woff') format('woff'),url('../fonts/ubuntu-v20-latin-italic.ttf') format('truetype'),url('../fonts/ubuntu-v20-latin-italic.svg#Ubuntu') format('svg')}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:500;src:url('../fonts/ubuntu-v20-latin-500.eot');src:local(''),url('../fonts/ubuntu-v20-latin-500.eot?#iefix') format('embedded-opentype'),url('../fonts/ubuntu-v20-latin-500.woff2') format('woff2'),url('../fonts/ubuntu-v20-latin-500.woff') format('woff'),url('../fonts/ubuntu-v20-latin-500.ttf') format('truetype'),url('../fonts/ubuntu-v20-latin-500.svg#Ubuntu') format('svg')}@font-face{font-family:'Ubuntu';font-style:italic;font-weight:500;src:url('../fonts/ubuntu-v20-latin-500italic.eot');src:local(''),url('../fonts/ubuntu-v20-latin-500italic.eot?#iefix') format('embedded-opentype'),url('../fonts/ubuntu-v20-latin-500italic.woff2') format('woff2'),url('../fonts/ubuntu-v20-latin-500italic.woff') format('woff'),url('../fonts/ubuntu-v20-latin-500italic.ttf') format('truetype'),url('../fonts/ubuntu-v20-latin-500italic.svg#Ubuntu') format('svg')}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:700;src:url('../fonts/ubuntu-v20-latin-700.eot');src:local(''),url('../fonts/ubuntu-v20-latin-700.eot?#iefix') format('embedded-opentype'),url('../fonts/ubuntu-v20-latin-700.woff2') format('woff2'),url('../fonts/ubuntu-v20-latin-700.woff') format('woff'),url('../fonts/ubuntu-v20-latin-700.ttf') format('truetype'),url('../fonts/ubuntu-v20-latin-700.svg#Ubuntu') format('svg')}@font-face{font-family:'Ubuntu';font-style:italic;font-weight:700;src:url('../fonts/ubuntu-v20-latin-700italic.eot');src:local(''),url('../fonts/ubuntu-v20-latin-700italic.eot?#iefix') format('embedded-opentype'),url('../fonts/ubuntu-v20-latin-700italic.woff2') format('woff2'),url('../fonts/ubuntu-v20-latin-700italic.woff') format('woff'),url('../fonts/ubuntu-v20-latin-700italic.ttf') format('truetype'),url('../fonts/ubuntu-v20-latin-700italic.svg#Ubuntu') format('svg')}.pd-small{padding:.75rem}.pd-normal{padding:1rem}.pd-big{padding:2rem}.size-small{font-size:.75rem}.size-normal{font-size:1rem}.size-big{font-size:1.375rem}.size-bigger{font-size:1.75rem}.title{font-weight:500;margin-bottom:1rem}.title-small{font-size:1.375rem}.title-normal{font-size:1.75rem}.title-big{font-size:2rem}.w-25{width:25%}.w-50{width:25%}.w-75{width:25%}.w-100{width:25%}*{box-sizing:border-box}body{margin:0;background-color:#22252C;font-size:16px;font-family:'Ubuntu',sans-serif;color:#ffffff}.wrapper{max-width:1450px;width:100%;margin:0 auto;display:flex;align-items:center;justify-content:center;padding:0 1rem}.wrapper-flex{flex-flow:row;gap:1rem;display:flex;justify-content:center;align-items:normal;width:100%;flex-wrap:wrap}@media (min-width:1450px){.wrapper{padding:0}}.main{display:flex;flex-flow:column;width:100%;min-height:calc(91.25vh);align-items:center;justify-content:center;padding:1rem 0}h1,h2,h3,h4{margin:0;margin-bottom:1rem}input[type="submit"],button{cursor:pointer}a{font-size:1rem;color:#ED6C0E;text-decoration:none;font-family:'Ubuntu',sans-serif}.btn{font-size:1rem;color:#ffffff;padding:.75rem 1rem;box-shadow:0 0 13px rgba(0,0,0,0.75);border-radius:.625rem;transition:.25s all ease;width:100%;cursor:pointer;border:none;min-width:165px;text-align:center;font-weight:700}.btn-base{background:#ED6C0E}.btn-alt{background:#2E3138}.btn:hover{box-shadow:0 0 0 rgba(0,0,0,0.75)}input,select{padding:.75rem 1rem;background:#2E3138;color:#ffffff;border:2px solid #565C68;border-radius:.625rem;outline:none}input::placeholder,select::placeholder{color:#565C68}label{margin-bottom:.5rem}.tile{background:#2E3138;border-radius:12px;box-shadow:0 0 13px rgba(0,0,0,0.75);padding:2rem;width:100%;max-width:950px}.tile__title{margin-bottom:2rem}.tile__form__item{display:flex;flex-flow:column;margin-bottom:2rem}.tile__form__additional{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2rem}.tile__form>p{text-align:center}.tile__list{list-style:none}.tile-grid{display:grid;grid-template-columns:calc(49.5%) calc(49.5%);gap:1.5rem;margin-bottom:2rem}.tile-grid-item{display:flex;flex-flow:column}.tile-grid-item-flex{display:grid;grid-template-columns:calc(79%) calc(19%);gap:2%;justify-content:space-between;margin-bottom:2%}.step{display:none}.step-show{display:block}.step-title{margin-bottom:2rem}.step-actions{display:flex;justify-content:space-between}
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="wrapper">
+        <div class="tile">
+            <form id="account" class="tile__form">
+                <div class="step step-1">
+                    <div class="step-title">
+                        <span class="title-normal">Allgemein</span>
+                    </div>
+                    <div class="step-content">
+                        <div class="tile-grid">
+                            <div class="tile-grid-item">
+                                <label for="company">Firmenname</label>
+                                <input type="text" placeholder="Firmenname" id="company" name="company">
+                            </div>
+                            <div class="tile-grid-item">
+                                <label for="mybusiness">MyBusiness Link</label>
+                                <input type="text" placeholder="MyBusiness Link" id="mybusiness" name="mybusiness">
+                            </div>
+                            <div class="tile-grid-item">
+                                <label for="domain">Domain (ohne https)</label>
+                                <input type="text" placeholder="example.com" id="domain" name="domain">
+                            </div>
+                            <div class="tile-grid-item">
+                                <label for="meta">Meta Description</label>
+                                <input type="text" placeholder="Meta Description" id="meta" name="meta">
+                            </div>
+                            <div class="tile-grid-item">
+                                <label for="logo">Link zum Logo (mit https)</label>
+                                <input type="text" placeholder="Link zum Logo" id="logo" name="logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-actions">
+                        <button class="btn btn-base" id="submit-step-1">Weiter</button>
+                    </div>
+                </div>
+                <div class="step step-2">
+                    <div class="step-title">
+                        <span class="title-normal">Bewertungen (1)</span>
+
+                    </div>
+                    <div class="step-content">
+                        <div class="tile-grid">
+                            <div class="tile-grid-item">
+                                <label for="average">Durchschnitt</label>
+                                <input type="number" id="average" min="0" max="5" placeholder="0 - 5">
+                            </div>
+                            <div class="tile-grid-item">
+                                <label for="best">Bestes</label>
+                                <input type="number" id="best" min="0" max="5" placeholder="0 - 5">
+                            </div>
+                            <div class="tile-grid-item">
+                                <label for="worst">Schlechtestes</label>
+                                <input type="number" id="worst" min="0" max="5" placeholder="0 - 5">
+                            </div>
+                            <div class="tile-grid-item">
+                                <label for="count">Anzahl</label>
+                                <input type="number" id="count" min="0" placeholder="Anzahl der Rezensionen">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-actions">
+                        <button class="btn btn-alt" id="return-step-2">Zurück</button>
+                        <button class="btn btn-base" id="submit-step-2">Weiter</button>
+                    </div>
+                </div>
+                <div class="step step-3">
+                    <div class="step-title">
+                        <span class="title-normal">Bewertungen (2)</span>
+                    </div>
+                    <div class="step-content">
+                        <div class="tile-grid">
+                            <div class="tile-grid-item">
+                                <label for="name-1">Name</label>
+                                <div class="tile-grid-item-flex">
+                                    <input type="text" class="name" placeholder="Name" id="name-1" name="name-1">
+                                    <input type="number" class="rating" id="rating-1" min="0" max="5" placeholder="0 - 5">
+                                </div>
+                                <label for="description-1" style="margin-top: 2%">Beschreibung</label>
+                                <input type="text" id="description-1" placeholder="Review Beschreibung" class="description">
+                            </div>
+                            <div class="tile-grid-item">
+                                <label for="name-2">Name</label>
+                                <div class="tile-grid-item-flex">
+                                    <input type="text" class="name" placeholder="Name" id="name-2" name="name-2">
+                                    <input type="number" class="rating" id="rating-2" min="0" max="5" placeholder="0 - 5">
+                                </div>
+                                <label for="description-2" style="margin-top: 2%">Beschreibung</label>
+                                <input type="text" id="description-2" placeholder="Review Beschreibung" class="description">
+                            </div>
+                            <div class="tile-grid-item">
+                                <label for="name-3">Name</label>
+                                <div class="tile-grid-item-flex">
+                                    <input type="text" class="name" placeholder="Name" id="name-3" name="name-3">
+                                    <input type="number" class="rating" id="rating-3" min="0" max="5" placeholder="0 - 5">
+                                </div>
+                                <label for="description-3" style="margin-top: 2%">Beschreibung</label>
+                                <input type="text" id="description-3" placeholder="Review Beschreibung" class="description">
+                            </div>
+                            <div class="tile-grid-item">
+                                <label for="name-4">Name</label>
+                                <div class="tile-grid-item-flex">
+                                    <input type="text" class="name" placeholder="Name" id="name-4" name="name-4">
+                                    <input type="number" class="rating" id="rating-4" min="0" max="5" placeholder="0 - 5">
+                                </div>
+                                <label for="description-4" style="margin-top: 2%">Beschreibung</label>
+                                <input type="text" id="description-4" placeholder="Review Beschreibung" class="description">
+                            </div>
+                            <div class="tile-grid-item">
+                                <label for="name-5">Name</label>
+                                <div class="tile-grid-item-flex">
+                                    <input type="text" class="name" placeholder="Name" id="name-5" name="name-5">
+                                    <input type="number" class="rating" id="rating-5" min="0" max="5" placeholder="0 - 5">
+                                </div>
+                                <label for="description-5" style="margin-top: 2%">Beschreibung</label>
+                                <input type="text" id="description-5" placeholder="Review Beschreibung" class="description">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-actions">
+                        <button class="btn btn-alt"  id="return-step-3">Zurück</button>
+                        <button class="btn btn-base" id="submit">Sterne Snippet generieren</button>
+                    </div>
+                </div>
+                <div class="step step-4">
+                    <div class="step-title">
+                        <span class="title-normal">Das Sterne Snippet ist fertig</span>
+                    </div>
+                    <div class="step-content">
+                        <textarea id="result" style="width: 100%;max-width:100%;height:350px">
+
+                        </textarea>
+                    </div>
+                    <div class="step-actions">
+                        <button class="btn btn-alt" id="return-step-4">Zurück</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+    "use strict";
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        loadStep(0);
+
+        document.querySelector('#submit-step-1').addEventListener('click', (e) => {
+            e.preventDefault();
+            loadStep(1)
+        })
+        document.querySelector('#submit-step-2').addEventListener('click', (e) => {
+            e.preventDefault();
+            loadStep(2)
+        })
+
+
+        document.querySelector('#return-step-2').addEventListener('click', (e) => {
+            e.preventDefault();
+            loadStep(0)
+        })
+        document.querySelector('#return-step-3').addEventListener('click', (e) => {
+            e.preventDefault();
+            loadStep(1)
+        })
+        document.querySelector('#return-step-4').addEventListener('click', (e) => {
+            e.preventDefault();
+            loadStep(2)
+        })
+
+
+
+        function loadStep (stepIndex)
+        {
+            let steps = document.querySelectorAll('.step');
+            for (let i = 0; i < steps.length; i++) {
+                if (stepIndex === i ) {
+                    steps[i].classList.add('step-show');
+                } else {
+                    steps[i].classList.remove('step-show');
+                }
+            }
+        }
+
+        document.querySelector('#submit').addEventListener('click', function (e) {
+            e.preventDefault();
+            let company = document.querySelector('#company').value;
+            let mybusiness = document.querySelector('#mybusiness').value;
+            let domain = document.querySelector('#domain').value;
+            let meta = document.querySelector('#meta').value;
+            let logo = document.querySelector('#logo').value;
+
+            let rating_value = parseFloat(document.querySelector('#average').value);
+            let rating_best = parseFloat(document.querySelector('#best').value);
+
+            let rating_worst = parseFloat(document.querySelector('#worst').value);
+            let rating_count = parseFloat(document.querySelector('#count').value);
+
+            let reviews_names = document.querySelectorAll('.name');
+            let reviews_ratings = document.querySelectorAll('.rating');
+            let reviews_descriptions = document.querySelectorAll('.description');
+
+
+            let today = new Date();
+            let dd = String(today.getDate()).padStart(2, '0');
+            let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            let yyyy = today.getFullYear() + 1;
+            let script = JSON.stringify( {
+                "@context": "https://schema.org",
+                "@type": "Product",
+                "name": company,
+                "description": meta,
+                "brand": {
+                    "@type": "Organization",
+                    "url": `https://${domain}?utm_source=google&utm_medium=local&utm_campaign=gmb_website`,
+                    "name": company
+                },
+                "image": logo,
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": rating_value,
+                    "bestRating": rating_best,
+                    "worstRating": rating_worst,
+                    "ratingCount": rating_count
+                },
+                "review": [
+                    {
+                        "@type": "Review",
+                        "description": reviews_descriptions[0].value,
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": parseFloat(reviews_ratings[0].value),
+                            "bestRating": 5,
+                            "worstRating": 1
+                        },
+                        "author": {
+                            "@type": "Person",
+                            "name": reviews_names[0].value
+                        }
+                    },
+                    {
+                        "@type": "Review",
+                        "description": reviews_descriptions[1].value,
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": parseFloat(reviews_ratings[1].value),
+                            "bestRating": 5,
+                            "worstRating": 1
+                        },
+                        "author": {
+                            "@type": "Person",
+                            "name": reviews_names[1].value
+                        }
+                    },
+                    {
+                        "@type": "Review",
+                        "description": reviews_descriptions[2].value,
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": parseFloat(reviews_ratings[2].value),
+                            "bestRating": 5,
+                            "worstRating": 1
+                        },
+                        "author": {
+                            "@type": "Person",
+                            "name": reviews_names[2].value
+                        }
+                    },
+                    {
+                        "@type": "Review",
+                        "description": reviews_descriptions[3].value,
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": parseFloat(reviews_ratings[3].value),
+                            "bestRating": 5,
+                            "worstRating": 1
+                        },
+                        "author": {
+                            "@type": "Person",
+                            "name": reviews_names[3].value
+                        }
+                    },
+                    {
+                        "@type": "Review",
+                        "description": reviews_descriptions[4].value,
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": parseFloat(reviews_ratings[4].value),
+                            "bestRating": 5,
+                            "worstRating": 1
+                        },
+                        "author": {
+                            "@type": "Person",
+                            "name": reviews_names[4].value
+                        }
+                    },
+                ],
+                "sku": domain,
+                "url": `https://${domain}?utm_source=google&utm_medium=local&utm_campaign=gmb_website`,
+                "offers": {
+                    "@type": "Offer",
+                    "url": `https://${domain}?utm_source=google&utm_medium=local&utm_campaign=gmb_website`,
+                    "price": "95",
+                    "priceCurrency": "EUR",
+                    "availability": "https://schema.org/InStock",
+                    "priceValidUntil": yyyy + '-' + mm + '-' + dd
+                },
+                "gtin8": "00000000"
+            });
+            document.querySelector('#result').innerText = `<style>.wae-wrapper{display:flex;flex-flow:column;justify-content:center}.wae-stars{display:flex;justify-content:center}.wae-star{background-color:#f5ae0a;width:1.5rem;height:1.5rem;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);display:inline-block}.wae-rating{text-align:center}</style><a rel="noopener noreferrer" target="_blank" href="${mybusiness}"><div class="wae-stars"><div class="wae-star"></div><div class="wae-star"></div><div class="wae-star"></div><div class="wae-star"></div><div class="wae-star"></div></div><div class="wae-rating">${rating_value} von 5 Sternen</div></a><script type="application/ld+json">${script}</script>`;
+loadStep(3)
+});
+
+});
+
+
+</script>
+</body>
+</html>

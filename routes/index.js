@@ -10,6 +10,10 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
     res.render('index', {title: 'Express'});
 });
+/* GET home page. */
+router.get('/stars', function (req, res, next) {
+    res.render('stars', {title: ''});
+});
 router.post('/generate', async function (req, res, next) {
     async function string_to_slug(str) {
         str = str.replace(/^\s+|\s+$/g, ''); // trim
